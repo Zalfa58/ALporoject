@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FreeWebsiteCode - Table Flipping Website Slider</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="css/navbar-side.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<!-- Start of HTML Coding... -->
+<!-- navbar side -->
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-c-plus-plus icon'></i>
+      <div class="logo_name"></div>
+      <i class='bx bx-menu' id="btn" ></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <a href="#">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+       <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+     <a href="#">
+       <i class='bx bx-user' ></i>
+       <span class="links_name">User</span>
+     </a>
+     <span class="tooltip">User</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-chat' ></i>
+       <span class="links_name">Messages</span>
+     </a>
+     <span class="tooltip">Messages</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-pie-chart-alt-2' ></i>
+       <span class="links_name">Analytics</span>
+     </a>
+     <span class="tooltip">Analytics</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-folder' ></i>
+       <span class="links_name">File Manager</span>
+     </a>
+     <span class="tooltip">Files</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-cart-alt' ></i>
+       <span class="links_name">Order</span>
+     </a>
+     <span class="tooltip">Order</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-heart' ></i>
+       <span class="links_name">Saved</span>
+     </a>
+     <span class="tooltip">Saved</span>
+  </li>
+  <li class="">
+    <span class="links_name">
+      <div class="btn-group dropup">
+        <span type="button" class="btn dropdown-toggle btn-va" data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </span>
+        <ul class="dropdown-menu dropdown-va">
+          <a href="#" class="btn-dropdown" onclick="openSwitch()">Setting</a>
+          <a href="#" class="btn-dropdown" onclick="openLogout()">Log out</a>
+        </ul>
+      </div>
+    </span>
+    <span class="tooltip">Setting</span>
+     
+   </li>
+   <li class="profile">
+       <div class="profile-details">
+         <!--<img src="profile.jpg" alt="profileImg">-->
+         <div class="name_job">
+           <div class="name">Hitori'D</div>
+           <div class="job">Web designer</div>
+         </div>
+       </div>
+       <i class='' id="imgProfile" ><img src="img/gawr_gura.jpg" alt=""></i>
+   </li>
+  </ul>
+</div>
+
+<!-- body/container -->
+
+<div class="container home">
+  <!-- story -->
+  <!-- <div class="story text-center">
+    <div class="row">
+      <div class="col">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col ">
+        <div class="story-scroll">
+          <img class="img-top" src="/img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- banner -->
+  <div class="banner-top">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div class="carousel">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div> -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card bg-dark text-white">
+            <img src="img/Hutao-banner.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="card bg-dark text-white">
+            <img src="img/raze-banner.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card bg-dark text-white">
+            <img src="img/Valkyrie-banner.png" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+<!-- story -->
+  <div class="stories"></div>
+  <form action="" class="creatpost">
+    <div class="profil-kecil">
+      <img src="" alt="">
+    </div>
+    <input type="text" placeholder="" id="creatpost">
+    <input type="sumbit" value="Post" class=" btn btn-primary">
+  </form>
+
+<!-- post -->
+  
+  <div class="post">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+       <div class="card h-100">
+          <img src="/img/hololive_en_g1_by_kevintower_devfli9 (1).png" type="button" onclick="openPopup()" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- message -->
+<div class="container">
+  
+</div>
+
+<!-- popup -->
+
+<!-- popup setting -->
+
+<div>
+  <div class="container2">
+
+  </div>
+</div>
+
+<!-- popup post -->
+<div class="popup" id="popup">
+  <div class="container1" id="app">
+    <section>
+      <h4></h4>
+    </section>
+  
+    <section>
+      <div class="kartu-img">
+        <div class="kartu-photo">
+          <div id="mask-1" class="mask"></div>
+          <div id="mask-2" class="mask"></div>
+          <a href="#" @click="nextCard" class="next">
+            
+            <span class="material-symbols-outlined">
+              arrow_forward_ios
+              </span>
+          </a>
+          <img :src="currentCard.photo">
+        </div>
+        <div class="kartu-info">
+          <div class="profile-kecil">
+            <img src="img/516bcfe67b990dec06cf57fcaedcace1.jpg" alt="">
+            <p class="name-kecil">Hitori</p>  
+            <a href="#" class="follow-kecil">follow</a>
+            <div class="btn-group dropend">
+              <span type="button" class="material-symbols-outlined btn " data-bs-toggle="dropdown" aria-expanded="false">
+                more_vert
+              </span>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" onclick="closePopup()" href="#">close</a></li>
+                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                <li><a class="dropdown-item" href="#">Menu item</a></li>
+              </ul>
+            </div>
+          </div>
+          <h4 id="kartu-info-title">{{ currentCard.title }}</h4>
+          <p id="kartu-info-desc">{{ currentCard.desc }}</p>
+          <a href="#">
+            <p>More details</p>
+            <svg viewBox="0 0 20 10">
+              <line x1="0" y1="5" x2="20" y2="5" />
+              <line x1="15" y1="0" x2="20" y2="5" />
+              <line x1="15" y1="10" x2="20" y2="5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="switch" id="Switch">
+  <div class="container-PS">
+    <div class="top-PS">
+      <h4>Switch accounts</h4>
+    </div>
+    <hr>
+    <div class="list-account">
+      <div class="account">
+        <img src="/img/gawr_gura.jpg" alt="" class="photoP">
+        <h5 class="name">Hitori'D</h5>
+      </div>
+    </div>
+    <a href="">Log into an Existing Account</a>
+  </div>
+</div>
+
+
+
+
+
+<!-- END of HTML Coding... -->
+
+
+
+
+
+<script src="js/popup.js"></script>
+<script src="js/navbar.js"></script>
+<script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js'></script><script  src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

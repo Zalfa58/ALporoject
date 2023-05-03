@@ -1,0 +1,65 @@
+.popup {
+    margin-bottom: 30px;
+    padding-top: 10px;
+    display: flex;
+    width: auto;
+    border-radius: 6px;
+    position: absolute;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    visibility: hidden;
+    position: absolute;
+}
+
+.open-popup {
+    visibility: visible;
+}
+
+
+/* popup switch */
+
+.switch {
+    margin-bottom: 30px;
+    padding-top: -1000000px;
+    display: flex;
+    width: auto;
+    border-radius: 6px;
+    position: absolute;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    visibility: hidden;
+    position: absolute;
+}
+
+.openSwitch {
+    visibility: visible;
+}
+
+.container-PS {
+
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(190, 188, 188);
+}
+
+.container-PS a{
+
+}
+
+.list-account {
+    /* padding: 20px; */
+}
+
+.account {
+    display: flex;
+}
+
+.photoP {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.name {
+    padding-left: 5px;
+    margin-top: 10px;
+}
