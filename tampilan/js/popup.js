@@ -16,7 +16,7 @@ function openSetting() {
     popup.classList.add('Setting')
 }
 
-function openSetting() {
+function closeSetting() {
     popup.classList.remove('Setting')
 }
 
@@ -28,7 +28,7 @@ function openLogin() {
     popup.classList.add('Login');
 }
 
-function openLogin() {
+function closeLogin() {
     popup.classList.remove('Login');
 }
 
@@ -40,6 +40,17 @@ function openSwitch() {
     popup.classList.add('switch');
 }
 
-function openSwitch() {
+function closeSwitch() {
     popup.classList.remove('switch');
+}
+
+// popup creat post
+let creatPost = document.getElementById("creatPost");
+
+function openCreat() {
+    popup.classList.add('creatPost');
+}
+
+function closeCreat() {
+    popup.classList.remove('creatPost');
 }

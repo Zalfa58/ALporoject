@@ -1,0 +1,36 @@
+.story {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./img/amelia_watson.jpg");
+    background-size: cover;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .content img {
+    background-size: cover;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .time {
+    color: #777;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  

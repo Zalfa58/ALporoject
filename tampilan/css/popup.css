@@ -35,6 +35,24 @@
     visibility: visible;
 }
 
+.creatPost {
+    margin-bottom: 30px;
+    padding-top: -1000000px;
+    display: flex;
+    width: auto;
+    border-radius: 6px;
+    position: absolute;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    visibility: hidden;
+    position: absolute;
+    background-color: antiquewhite;
+}
+
+.creatPost{
+    visibility: visible;
+}
+
 .container-PS {
 
     padding: 20px;

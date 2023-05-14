@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/popup.css">
   <link rel="stylesheet" href="css/navbar-side.css">
+  <link rel="stylesheet" href="css/story.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -142,13 +143,13 @@
     </div>
   </div> -->
 <!-- banner -->
-  <div class="banner-top">
+  <!-- <div class="banner-top">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <!-- <div class="carousel">
+      <div class="carousel">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div> -->
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card bg-dark text-white">
@@ -190,19 +191,85 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </div>
+  </div> -->
 
 <!-- story -->
-  <div class="stories"></div>
-  <form action="" class="creatpost">
-    <div class="profil-kecil">
-      <img src="" alt="">
+  <!-- <div class="middle">
+    <div class="stories">
+      <div class="story">
+        <div class="profile-photo">
+          <img src="" alt="">
+        </div>
+        <p class="name"></p>
+      </div>
+      <div class="story">
+        <div class="profile-photo">
+          <img src="" alt="">
+        </div>
+        <p class="name"></p>
+      </div>
+      <div class="story">
+        <div class="profile-photo">
+          <img src="" alt="">
+        </div>
+        <p class="name"></p>
+      </div>
+      <div class="story">
+        <div class="profile-photo">
+          <img src="" alt="">
+        </div>
+        <p class="name"></p>
+      </div>
+      <div class="story">
+        <div class="profile-photo">
+          <img src="" alt="">
+        </div>
+        <p class="name"></p>
+      </div>
+      <div class="story">
+        <div class="profile-photo">
+          <img src="" alt="">
+        </div>
+        <p class="name"></p>
+      </div>
     </div>
-    <input type="text" placeholder="" id="creatpost">
-    <input type="sumbit" value="Post" class=" btn btn-primary">
-  </form>
+  </div> -->
+  <div class="row row-cols-1 row-cols-md-5  g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="img/amelia_watson.jpg" class="card-img-top" alt="...">
+        <div class="card-footer">
+          <p class="fs-6 ">Last updated 3 mins ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="img/amelia_watson.jpg" class="card-img card-story img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="img/amelia_watson.jpg" class="card-img-top" alt="...">
+        <div class="card-footer">
+          <p class="fs-6 ">Last updated 3 mins ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>  
+  </div>
 
 <!-- post -->
+  <div class="">
+    <a href="#"  onclick="openCreat()"> Creat post</a>
+  </div>
   
   <div class="post">
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -242,6 +309,29 @@
 <div>
   <div class="container2">
 
+  </div>
+</div>
+<!-- popup creat -->
+
+<div class="creatPost" id="creatPost">
+  <div class="container1">
+    <div class="creat-post">
+      <form>
+        <div class="mb-3">
+          <a href="#" type="button" onclick="closeCreat()">close</a>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="title" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1"></label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </div>
 </div>
 
